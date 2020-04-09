@@ -38,18 +38,8 @@ struct User {
     }
 }
 
-////var friends = [
-////      "Василий Иванов",
-////      "Егений Петров",
-////      "Жанна Агузарова",
-////      "Тиль Линденманн",
-////      "Димон",
-////      "Дядя Федор"
-////  ]
-//
-//let vasIvan = User(name: "Василий Иванов", avatar: UIImage(named: "Василий Иванов"), place: "Санкт-Петербург", education: educationEnum.higher, maritalStatus: maritalStatusEnum.inSearch, foto: [UIImage(named: "vi")])
-//
-//let friends:[User] = [vasIvan]
+
+
 
 
 

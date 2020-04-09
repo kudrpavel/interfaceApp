@@ -10,6 +10,10 @@ import UIKit
 
 class MyGroupController: UITableViewController {
     
+    var myGroups = [Group]()
+    
+    var group: Group!
+    
     @IBAction func addGroup(seque: UIStoryboardSegue) {
         
         if seque.identifier == "addGroup" {
@@ -18,22 +22,20 @@ class MyGroupController: UITableViewController {
             
             if let indexPath = groupController.tableView.indexPathForSelectedRow {
                 
-                let group = groupController.groups[indexPath.row]
+                let myGroup = groupController.groups[indexPath.row]
                 
-                if !myGroups.contains(group) {
-                
-                    myGroups.append(group)
-                
+//                if !myGroups.contains(myGroup) { // так не работает. необходимо подправить
+                    
+                    myGroups.append(myGroup)
+                    
                     tableView.reloadData()
-                }
+//                }
+                
             }
         }
-        
     }
     
-    var myGroups = [String]()
-    
- 
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -63,8 +65,9 @@ class MyGroupController: UITableViewController {
           
           let group = myGroups[indexPath.row]
           
-          cell.myGroupCellLabel.text = group
-
+        cell.myGroupCellLabel.text = group.name
+        cell.myGroupCell.image = group.avatar
+    
           return cell
 
     }

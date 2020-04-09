@@ -13,6 +13,8 @@ class GroupCell: UITableViewCell {
  
     @IBOutlet weak var selectGroup: UILabel!
     
+    @IBOutlet weak var iconGroupAll: UIImageView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

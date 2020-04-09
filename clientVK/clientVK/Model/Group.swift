@@ -6,12 +6,10 @@
 //  Copyright © 2020 paul kudryavtsev. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
-struct group {
-    
-    
-    
-    
+struct Group {
+    var name: String!
+    var avatar: UIImage?
 }

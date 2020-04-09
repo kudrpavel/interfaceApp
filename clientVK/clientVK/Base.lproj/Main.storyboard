@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -240,6 +240,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="myGroupCell" destination="hZu-Ow-W9T" id="Myp-Bf-bPH"/>
                                     <outlet property="myGroupCellLabel" destination="HG5-UW-Fic" id="inM-Ol-VUp"/>
                                 </connections>
                             </tableViewCell>
@@ -265,20 +266,20 @@
         <scene sceneID="ViW-sw-whH">
             <objects>
                 <tableViewController title="Друзья" id="dxz-90-Spn" customClass="FriendsController" customModule="clientVK" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1Dh-AO-l6W">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1Dh-AO-l6W">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OneFriendCell" id="BJR-0L-MQ9" customClass="FriendsCell" customModule="clientVK" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="43.5"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="left" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BJR-0L-MQ9" id="FCf-cM-qr2">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34k-EM-DZi" userLabel="Friend name">
-                                            <rect key="frame" x="26" y="11.5" width="42" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34k-EM-DZi" userLabel="Friend name">
+                                            <rect key="frame" x="26" y="12" width="68" height="20.5"/>
                                             <accessibility key="accessibilityConfiguration">
                                                 <accessibilityTraits key="traits" none="YES"/>
                                             </accessibility>
@@ -286,28 +287,82 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ldf-P0-qPD">
-                                            <rect key="frame" x="257" y="5.5" width="53" height="33"/>
+                                        <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="fXb-LB-5dH">
+                                            <rect key="frame" x="265" y="2" width="40" height="40"/>
+                                            <subviews>
+                                                <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Wc-3v-UXc" customClass="AvatarShadow" customModule="clientVK" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="Yk9-3Y-WQU"/>
+                                                        <constraint firstAttribute="width" constant="40" id="ZIA-uj-RUY"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                            <real key="value" value="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <view clipsSubviews="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="L5r-g3-YCm" customClass="AvatarView" customModule="clientVK" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ldf-P0-qPD">
+                                                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="EiE-9U-GKW"/>
+                                                        <constraint firstAttribute="height" constant="40" id="GeL-rI-pda"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                            <real key="value" value="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="53" id="6MO-pJ-sBu"/>
-                                                <constraint firstAttribute="height" constant="33" id="hPC-ot-EjM"/>
+                                                <constraint firstAttribute="trailing" secondItem="3Wc-3v-UXc" secondAttribute="trailing" id="A7A-c8-pVr"/>
+                                                <constraint firstItem="3Wc-3v-UXc" firstAttribute="top" secondItem="fXb-LB-5dH" secondAttribute="top" id="G5S-h6-SLn"/>
+                                                <constraint firstAttribute="height" constant="40" id="M4C-wJ-Ar2"/>
+                                                <constraint firstAttribute="trailing" secondItem="L5r-g3-YCm" secondAttribute="trailing" id="OHV-Fg-MdD"/>
+                                                <constraint firstItem="3Wc-3v-UXc" firstAttribute="leading" secondItem="fXb-LB-5dH" secondAttribute="leading" id="Vw7-d1-ZDt"/>
+                                                <constraint firstItem="L5r-g3-YCm" firstAttribute="leading" secondItem="fXb-LB-5dH" secondAttribute="leading" id="c2e-df-g1l"/>
+                                                <constraint firstAttribute="bottom" secondItem="L5r-g3-YCm" secondAttribute="bottom" id="gur-pb-q9V"/>
+                                                <constraint firstItem="L5r-g3-YCm" firstAttribute="top" secondItem="fXb-LB-5dH" secondAttribute="top" id="kOk-pB-tys"/>
+                                                <constraint firstAttribute="width" constant="40" id="x1i-IA-uyn"/>
+                                                <constraint firstAttribute="bottom" secondItem="3Wc-3v-UXc" secondAttribute="bottom" id="xkz-0d-SHP"/>
                                             </constraints>
-                                        </imageView>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                    <real key="value" value="0.0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="34k-EM-DZi" firstAttribute="leading" secondItem="FCf-cM-qr2" secondAttribute="leadingMargin" constant="10" id="3FM-L9-Mql"/>
-                                        <constraint firstItem="34k-EM-DZi" firstAttribute="centerY" secondItem="FCf-cM-qr2" secondAttribute="centerY" id="GRw-Lz-0Ko"/>
-                                        <constraint firstItem="ldf-P0-qPD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="34k-EM-DZi" secondAttribute="trailing" constant="8" symbolic="YES" id="Lg9-ok-uaD"/>
-                                        <constraint firstItem="ldf-P0-qPD" firstAttribute="centerY" secondItem="FCf-cM-qr2" secondAttribute="centerY" id="cdp-of-TfO"/>
-                                        <constraint firstAttribute="trailing" secondItem="ldf-P0-qPD" secondAttribute="trailing" constant="10" id="v2b-yZ-sm2"/>
+                                        <constraint firstItem="fXb-LB-5dH" firstAttribute="leading" relation="lessThanOrEqual" secondItem="34k-EM-DZi" secondAttribute="trailing" constant="171" id="5Nv-bd-3R6"/>
+                                        <constraint firstAttribute="trailing" secondItem="fXb-LB-5dH" secondAttribute="trailing" constant="15" id="Hoc-Ec-vYu"/>
+                                        <constraint firstItem="34k-EM-DZi" firstAttribute="leading" secondItem="FCf-cM-qr2" secondAttribute="leading" constant="26" id="Lv3-mf-bUl"/>
+                                        <constraint firstItem="fXb-LB-5dH" firstAttribute="top" secondItem="FCf-cM-qr2" secondAttribute="top" constant="2" id="XfV-NL-GIp"/>
+                                        <constraint firstAttribute="bottom" secondItem="fXb-LB-5dH" secondAttribute="bottom" constant="2" id="lUE-8p-cTz"/>
+                                        <constraint firstItem="34k-EM-DZi" firstAttribute="centerY" secondItem="FCf-cM-qr2" secondAttribute="centerY" id="mqh-rA-O3G"/>
+                                        <constraint firstItem="fXb-LB-5dH" firstAttribute="centerY" secondItem="FCf-cM-qr2" secondAttribute="centerY" id="rTB-O0-lCE"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                            <real key="value" value="19"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </tableViewCellContentView>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" selected="YES"/>
-                                    <bool key="isElement" value="NO"/>
-                                </accessibility>
                                 <connections>
                                     <outlet property="friendsName" destination="34k-EM-DZi" id="1cV-qr-H92"/>
+                                    <outlet property="icon" destination="ldf-P0-qPD" id="PMP-wN-Vi0"/>
                                     <segue destination="7SR-St-uWN" kind="show" identifier="FrendInfo" id="1hg-Ct-xMS"/>
                                 </connections>
                             </tableViewCell>
@@ -318,7 +373,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Друзья" id="3A2-MP-XFM"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1tQ-BY-KWG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -340,7 +395,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agU-xH-083">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agU-xH-083">
                                             <rect key="frame" x="25" y="11.5" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -355,7 +410,7 @@
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Zi8-qC-hcc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="agU-xH-083" secondAttribute="trailing" constant="8" symbolic="YES" id="LhL-pN-2Zo"/>
+                                        <constraint firstItem="Zi8-qC-hcc" firstAttribute="leading" relation="lessThanOrEqual" secondItem="agU-xH-083" secondAttribute="trailing" constant="187" id="RAc-Ce-Eje"/>
                                         <constraint firstItem="agU-xH-083" firstAttribute="leading" secondItem="95b-9c-CX4" secondAttribute="leadingMargin" constant="9" id="Wb0-90-g1H"/>
                                         <constraint firstAttribute="trailing" secondItem="Zi8-qC-hcc" secondAttribute="trailing" constant="10" id="gCM-0s-H2L"/>
                                         <constraint firstItem="agU-xH-083" firstAttribute="centerY" secondItem="95b-9c-CX4" secondAttribute="centerY" id="ofg-xE-BU1"/>
@@ -363,6 +418,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="iconGroupAll" destination="Zi8-qC-hcc" id="UCp-e4-nvn"/>
                                     <outlet property="selectGroup" destination="agU-xH-083" id="Cqx-yw-l2q"/>
                                     <segue destination="aaD-hn-Uul" kind="unwind" identifier="addGroup" unwindAction="addGroupWithSeque:" id="mxe-gi-k9a"/>
                                 </connections>
@@ -391,32 +447,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="D0I-4A-sXq">
-                            <size key="itemSize" width="314" height="436"/>
+                            <size key="itemSize" width="308" height="441"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FrendInfo" id="984-5J-RTA" customClass="FriendInfoCell" customModule="clientVK" customModuleProvider="target">
-                                <rect key="frame" x="3" y="0.0" width="314" height="436"/>
+                                <rect key="frame" x="6" y="0.0" width="308" height="441"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="pEd-Wf-ufb">
-                                    <rect key="frame" x="0.0" y="0.0" width="314" height="436"/>
-                                    <autoresizingMask key="autoresizingMask"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="308" height="441"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mmr-dX-62s">
-                                            <rect key="frame" x="8" y="22" width="298" height="392"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mmr-dX-62s">
+                                            <rect key="frame" x="25" y="25" width="258" height="406"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="130" id="Psl-UY-xY4"/>
+                                                <constraint firstAttribute="height" constant="130" id="hQX-n6-JbJ"/>
+                                            </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Mmr-dX-62s" firstAttribute="leading" secondItem="pEd-Wf-ufb" secondAttribute="leading" constant="8" id="H5P-Qo-mY4"/>
-                                        <constraint firstAttribute="bottom" secondItem="Mmr-dX-62s" secondAttribute="bottom" constant="22" id="I74-By-Zbp"/>
-                                        <constraint firstItem="Mmr-dX-62s" firstAttribute="centerY" secondItem="pEd-Wf-ufb" secondAttribute="centerY" id="YIA-OR-v2I"/>
-                                        <constraint firstItem="Mmr-dX-62s" firstAttribute="top" secondItem="pEd-Wf-ufb" secondAttribute="top" constant="22" id="YuJ-4T-ss6"/>
-                                        <constraint firstAttribute="trailing" secondItem="Mmr-dX-62s" secondAttribute="trailing" constant="8" id="jq8-9e-XwN"/>
+                                        <constraint firstItem="Mmr-dX-62s" firstAttribute="centerX" secondItem="pEd-Wf-ufb" secondAttribute="centerX" id="49N-MR-iNG"/>
+                                        <constraint firstItem="Mmr-dX-62s" firstAttribute="top" secondItem="pEd-Wf-ufb" secondAttribute="top" constant="25" id="Dml-7k-Siy"/>
+                                        <constraint firstItem="Mmr-dX-62s" firstAttribute="centerX" secondItem="pEd-Wf-ufb" secondAttribute="centerX" id="ZE6-Ia-KBa"/>
+                                        <constraint firstAttribute="bottom" secondItem="Mmr-dX-62s" secondAttribute="bottom" constant="10" id="kvS-CY-rp1"/>
+                                        <constraint firstItem="Mmr-dX-62s" firstAttribute="leading" secondItem="pEd-Wf-ufb" secondAttribute="leading" constant="25" id="xrh-pp-puN"/>
                                     </constraints>
                                 </collectionViewCellContentView>
-                                <size key="customSize" width="314" height="436"/>
+                                <size key="customSize" width="308" height="441"/>
+                                <connections>
+                                    <outlet property="photoFriend" destination="Mmr-dX-62s" id="c2g-pp-amP"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -489,8 +552,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="person.2.fill" catalog="system" width="64" height="40"/>
-        <image name="personalhotspot" catalog="system" width="64" height="36"/>
-        <image name="plus" catalog="system" width="64" height="56"/>
+        <image name="person.2.fill" catalog="system" width="128" height="80"/>
+        <image name="personalhotspot" catalog="system" width="128" height="75"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
     </resources>
 </document>

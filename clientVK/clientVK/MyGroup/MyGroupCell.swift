@@ -12,6 +12,8 @@ class MyGroupCell: UITableViewCell {
 
     @IBOutlet weak var myGroupCellLabel: UILabel!
     
+    @IBOutlet weak var myGroupCell: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

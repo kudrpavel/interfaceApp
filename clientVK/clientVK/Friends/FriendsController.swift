@@ -11,22 +11,23 @@ import UIKit
 class FriendsController: UITableViewController {
     
     var friends = [
-        "Василий Иванов",
-        "Егений Петров",
-        "Жанна Агузарова",
-        "Тиль Линденманн",
-        "Димон",
-        "Дядя Федор"
+        User(name: "Василий Иванов", avatar: UIImage(named: "men")!, place: "Санкт-Петербург", education: .average, maritalStatus: .inSearch, foto: [UIImage(named: "men")!,UIImage(named: "men")!,UIImage(named: "men")!,UIImage(named: "men")!,UIImage(named: "men")!,UIImage(named: "men")!]),
+        
+        User(name: "Егений Петров", avatar: UIImage(named: "vi")!, place: "Москва", education: .higher, maritalStatus: .married, foto: [UIImage(named: "vi")!,UIImage(named: "vi")!,UIImage(named: "vi")!,UIImage(named: "vi")!,UIImage(named: "vi")!,UIImage(named: "vi")!,UIImage(named: "vi")!,UIImage(named: "vi")!]),
+
+        User(name: "Жанна Агузарова", avatar: UIImage(named: "za")!, place: "Ебург", education: .average, maritalStatus: .single, foto: [UIImage(named: "za")!,UIImage(named: "za")!,UIImage(named: "za")!,UIImage(named: "za")!,UIImage(named: "za")!,UIImage(named: "za")!]),
+
+        User(name: "Тиль Линденманн", avatar: UIImage(named: "tl")!, place: "Берлин", education: .higher, maritalStatus: .inSearch, foto: [UIImage(named: "tl")!,UIImage(named: "tl")!,UIImage(named: "tl")!,UIImage(named: "tl")!,UIImage(named: "tl")!,UIImage(named: "tl")!,UIImage(named: "tl")!,]),
+
+        User(name: "Димон", avatar: UIImage(named: "di")!, place: "Питер", education: .higher, maritalStatus: .married, foto: [UIImage(named: "di")!,UIImage(named: "di")!,UIImage(named: "di")!,UIImage(named: "di")!,UIImage(named: "di")!,]),
+
+        User(name: "Дядя Федор", avatar: UIImage(named: "df")!, place: "Простоквашино", education: .initial, maritalStatus: .notChosen, foto: [UIImage(named: "df")!,UIImage(named: "df")!,UIImage(named: "df")!,UIImage(named: "df")!,UIImage(named: "df")!])
+        
     ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
@@ -40,6 +41,20 @@ class FriendsController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return friends.count
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let friendInfo = segue.destination as? FriendInfoController {
+            
+            if let indexPath = tableView.indexPathForSelectedRow {
+                
+                let friend = friends[indexPath.row]
+                
+                friendInfo.friend = friend
+
+            }
+        }
+    }
 
    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -48,7 +63,9 @@ class FriendsController: UITableViewController {
         
         let friend = friends[indexPath.row]
         
-        cell.friendsName.text = friend
+        cell.friendsName.text = friend.name
+        cell.icon.image = friend.avatar
+
 
         return cell
     }
