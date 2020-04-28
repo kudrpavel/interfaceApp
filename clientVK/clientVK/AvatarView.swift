@@ -9,25 +9,7 @@
 import UIKit
 
 class AvatarView: UIView {
-//
-//    @IBDesignable
-//    @IBInspectable var radius: CGFloat = 10 {
-//        didSet {
-//            setNeedsDisplay()
-//        }
-//    }
-//
-//
-//    override func draw(_ rect: CGRect) {
-//        super.draw(rect)
-//        guard let context = UIGraphicsGetCurrentContext() else { return }
-//        context.fillEllipse(in: CGRect (x: rect.midX - radius,
-//                                        y: rect.midY - radius,
-//                                        width: radius * 2,
-//                                        height: radius * 2))
-//    }
 
-    
     override class var layerClass: AnyClass {
         return CAShapeLayer.self
     }
@@ -42,10 +24,6 @@ class AvatarView: UIView {
         layer.cornerRadius = bounds.height / 2
 
     }
-    
-    
-    
-    
     
     
 }

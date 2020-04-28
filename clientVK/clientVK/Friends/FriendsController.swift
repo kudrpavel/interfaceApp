@@ -11,36 +11,36 @@ import UIKit
 class FriendsController: UITableViewController {
     
     var friends = [
-        User(name: "Василий Иванов", avatar: UIImage(named: "men")!, place: "Санкт-Петербург", education: .average, maritalStatus: .inSearch, foto: [UIImage(named: "men")!,UIImage(named: "men")!,UIImage(named: "men")!,UIImage(named: "men")!,UIImage(named: "men")!,UIImage(named: "men")!]),
-        
-        User(name: "Егений Петров", avatar: UIImage(named: "vi")!, place: "Москва", education: .higher, maritalStatus: .married, foto: [UIImage(named: "vi")!,UIImage(named: "vi")!,UIImage(named: "vi")!,UIImage(named: "vi")!,UIImage(named: "vi")!,UIImage(named: "vi")!,UIImage(named: "vi")!,UIImage(named: "vi")!]),
-
-        User(name: "Жанна Агузарова", avatar: UIImage(named: "za")!, place: "Ебург", education: .average, maritalStatus: .single, foto: [UIImage(named: "za")!,UIImage(named: "za")!,UIImage(named: "za")!,UIImage(named: "za")!,UIImage(named: "za")!,UIImage(named: "za")!]),
-
-        User(name: "Тиль Линденманн", avatar: UIImage(named: "tl")!, place: "Берлин", education: .higher, maritalStatus: .inSearch, foto: [UIImage(named: "tl")!,UIImage(named: "tl")!,UIImage(named: "tl")!,UIImage(named: "tl")!,UIImage(named: "tl")!,UIImage(named: "tl")!,UIImage(named: "tl")!,]),
-
-        User(name: "Димон", avatar: UIImage(named: "di")!, place: "Питер", education: .higher, maritalStatus: .married, foto: [UIImage(named: "di")!,UIImage(named: "di")!,UIImage(named: "di")!,UIImage(named: "di")!,UIImage(named: "di")!,]),
-
-        User(name: "Дядя Федор", avatar: UIImage(named: "df")!, place: "Простоквашино", education: .initial, maritalStatus: .notChosen, foto: [UIImage(named: "df")!,UIImage(named: "df")!,UIImage(named: "df")!,UIImage(named: "df")!,UIImage(named: "df")!])
+        User(firstName: "Василий", secondName: "Иванов",  avatar: UIImage(named: "gena5")!, place: "Санкт-Петербург", education: .average, maritalStatus: .inSearch, foto: [UIImage(named: "gena1")!,UIImage(named: "gena2")!,UIImage(named: "gena3")!,UIImage(named: "gena4")!,UIImage(named: "gena5")!]),
+        User(firstName: "Маринэ", secondName: "Авакян", avatar: UIImage(named: "gena5")!, place: "Санкт-Петербург", education: .average, maritalStatus: .inSearch, foto: [UIImage(named: "gena1")!,UIImage(named: "gena2")!,UIImage(named: "gena3")!,UIImage(named: "gena4")!,UIImage(named: "gena5")!]),
+        User(firstName: "Татьяна", secondName: "Арбенина", avatar: UIImage(named: "gena5")!, place: "Санкт-Петербург", education: .average, maritalStatus: .inSearch, foto: [UIImage(named: "gena1")!,UIImage(named: "gena2")!,UIImage(named: "gena3")!,UIImage(named: "gena4")!,UIImage(named: "gena5")!]),
+        User(firstName: "Юлия", secondName: "Иванова", avatar: UIImage(named: "gena5")!, place: "Санкт-Петербург", education: .average, maritalStatus: .inSearch, foto: [UIImage(named: "gena1")!,UIImage(named: "gena2")!,UIImage(named: "gena3")!,UIImage(named: "gena4")!,UIImage(named: "gena5")!]),
+        User(firstName: "Василий", secondName: "Иванов", avatar: UIImage(named: "gena5")!, place: "Санкт-Петербург", education: .average, maritalStatus: .inSearch, foto: [UIImage(named: "gena1")!,UIImage(named: "gena2")!,UIImage(named: "gena3")!,UIImage(named: "gena4")!,UIImage(named: "gena5")!]),
+        User(firstName: "Вадим", secondName: "Антонов", avatar: UIImage(named: "gena5")!, place: "Санкт-Петербург", education: .average, maritalStatus: .inSearch, foto: [UIImage(named: "gena1")!,UIImage(named: "gena2")!,UIImage(named: "gena3")!,UIImage(named: "gena4")!,UIImage(named: "gena5")!]),
+        User(firstName: "Дмитрий", secondName: "Борисов", avatar: UIImage(named: "gena5")!, place: "Санкт-Петербург", education: .average, maritalStatus: .inSearch, foto: [UIImage(named: "gena1")!,UIImage(named: "gena2")!,UIImage(named: "gena3")!,UIImage(named: "gena4")!,UIImage(named: "gena5")!]),
+        User(firstName: "Иннокентий", secondName: "Георгиев", avatar: UIImage(named: "gena5")!, place: "Санкт-Петербург", education: .average, maritalStatus: .inSearch, foto: [UIImage(named: "gena1")!,UIImage(named: "gena2")!,UIImage(named: "gena3")!,UIImage(named: "gena4")!,UIImage(named: "gena5")!]),
+        User(firstName: "Кирилл", secondName: "Иванов", avatar: UIImage(named: "gena5")!, place: "Санкт-Петербург", education: .average, maritalStatus: .inSearch, foto: [UIImage(named: "gena1")!,UIImage(named: "gena2")!,UIImage(named: "gena3")!,UIImage(named: "gena4")!,UIImage(named: "gena5")!]),
+        User(firstName: "Петр", secondName: "Головнев", avatar: UIImage(named: "gena5")!, place: "Санкт-Петербург", education: .average, maritalStatus: .inSearch, foto: [UIImage(named: "gena1")!,UIImage(named: "gena2")!,UIImage(named: "gena3")!,UIImage(named: "gena4")!,UIImage(named: "gena5")!]),
+        User(firstName: "Геннадий", secondName: "Костянец", avatar: UIImage(named: "gena5")!, place: "Санкт-Петербург", education: .average, maritalStatus: .inSearch, foto: [UIImage(named: "gena1")!,UIImage(named: "gena2")!,UIImage(named: "gena3")!,UIImage(named: "gena4")!,UIImage(named: "gena5")!]),
+        User(firstName: "Юрий", secondName: "Дудь", avatar: UIImage(named: "vi")!, place: "Москва", education: .higher, maritalStatus: .married, foto: [UIImage(named: "du3")!,UIImage(named: "du4")!,UIImage(named: "du7")!]),
+        User(firstName: "Жанна", secondName: "Агузарова", avatar: UIImage(named: "za")!, place: "Ебург", education: .average, maritalStatus: .single, foto: [UIImage(named: "z2")!,UIImage(named: "z3")!,UIImage(named: "z5")!]),
+        User(firstName: "Тиль", secondName: "Линденманн", avatar: UIImage(named: "tl")!, place: "Берлин", education: .higher, maritalStatus: .inSearch, foto: [UIImage(named: "til2")!,UIImage(named: "til3")!,UIImage(named: "til4")!,UIImage(named: "til5")!]),
+        User(firstName: "Николай", secondName: "Андреев", avatar: UIImage(named: "di")!, place: "Питер", education: .higher, maritalStatus: .married, foto: [UIImage(named: "di")!,UIImage(named: "di")!,UIImage(named: "di")!,UIImage(named: "di")!,UIImage(named: "di")!,]),
+        User(firstName: "Федор", secondName: "дядя", avatar: UIImage(named: "df")!, place: "Простоквашино", education: .initial, maritalStatus: .notChosen, foto: [UIImage(named: "df3")!,UIImage(named: "df4")!,UIImage(named: "df6")!])
         
     ]
 
+    @IBOutlet weak var FriendsCell: FriendsCell!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return friends.count
-    }
+    
+  
+    
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -51,10 +51,31 @@ class FriendsController: UITableViewController {
                 let friend = friends[indexPath.row]
                 
                 friendInfo.friend = friend
-
+               
             }
         }
     }
+    
+
+    
+    
+
+    
+//extension FriendsController: UITableViewDataSource {
+
+    // MARK: - Table view data source
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 2
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return friends.count
+    }
+    
+
 
    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -63,7 +84,7 @@ class FriendsController: UITableViewController {
         
         let friend = friends[indexPath.row]
         
-        cell.friendsName.text = friend.name
+        cell.friendsName.text = "\(friend.secondName) " + "\(friend.firstName)"
         cell.icon.image = friend.avatar
 
 
@@ -71,49 +92,68 @@ class FriendsController: UITableViewController {
     }
     
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
+    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
+            
+            friends.remove(at: indexPath.row)
+            
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+
+    
+        
+//    extension FriendsController: UITableViewDelegate {
+
+//        func tableView ( _ tableView : UITableView , didDeselectItemAt
+//        indexPath : IndexPath ) { }
+//    }
+        
+        
+    
+
+
+/*
+
+ extension FriendInfoController: UICollectionViewDataSource {
+        func numberOfSections ( in collectionView : UICollectionView ) -> Int {
+            return 1
+        }
+        
+        func collectionView ( _ collectionView : UICollectionView , numberOfItemsInSection section : Int ) -> Int {
+            return friend.foto.count
+            
+        }
+        
+        
+        func collectionView ( _ collectionView : UICollectionView , cellForItemAt indexPath : IndexPath ) -> UICollectionViewCell {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FriendInfoCell", for: indexPath) as! FriendInfoCell
+            
+           let photo = friend.foto[indexPath.row]
+            
+            cell.photoFriend.image = photo
+            
+            return cell }
+        
+
+        
+        }
+
+    extension FriendInfoController : UICollectionViewDelegate {
+        func collectionView ( _ collectionView : UICollectionView , didDeselectItemAt
+        indexPath : IndexPath ) { }
+        }
+
+
+final class LikeButton: UIControl {
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+    }
+}
+
+ */

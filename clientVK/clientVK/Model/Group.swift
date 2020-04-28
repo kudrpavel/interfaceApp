@@ -9,7 +9,20 @@
 import UIKit
 
 
-struct Group {
-    var name: String!
-    var avatar: UIImage?
+class Group {
+    let name: String!
+    let avatar: UIImage?
+
+    init(_ name: String, avatar: UIImage?) {
+        self.name = name
+        self.avatar = avatar
+    }
+}
+
+extension Group: Equatable {
+    static func == (lhs: Group, rhs: Group) -> Bool {
+        return
+            lhs.name == rhs.name &&
+            lhs.avatar == rhs.avatar
+    }
 }

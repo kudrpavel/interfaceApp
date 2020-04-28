@@ -13,6 +13,8 @@
 		B33B200D2423CBCC00F72A67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B33B200B2423CBCC00F72A67 /* Main.storyboard */; };
 		B33B200F2423CBCD00F72A67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B33B200E2423CBCD00F72A67 /* Assets.xcassets */; };
 		B33B20122423CBCD00F72A67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B33B20102423CBCD00F72A67 /* LaunchScreen.storyboard */; };
+		B36E9DD7244CA4F0000E68AA /* FriendOnePhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36E9DD6244CA4F0000E68AA /* FriendOnePhotoController.swift */; };
+		B36E9DDC245498BD000E68AA /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36E9DDB245498BD000E68AA /* PhotoView.swift */; };
 		B3B6E2AD243E3B8F00616DA2 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B6E2AC243E3B8F00616DA2 /* AvatarView.swift */; };
 		B3B6E2B1243F613A00616DA2 /* AvatarShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B6E2B0243F613A00616DA2 /* AvatarShadow.swift */; };
 		B3D802722434C75600C17F03 /* FriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D802712434C75600C17F03 /* FriendsCell.swift */; };
@@ -21,10 +23,10 @@
 		B3D802782434EA0E00C17F03 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D802772434EA0E00C17F03 /* GroupCell.swift */; };
 		B3D8027A2434EA3400C17F03 /* MyGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D802792434EA3400C17F03 /* MyGroupCell.swift */; };
 		B3D8027E2434EBAD00C17F03 /* MyGroupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D8027D2434EBAD00C17F03 /* MyGroupController.swift */; };
-		B3D802802434ECF900C17F03 /* FriendInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D8027F2434ECF900C17F03 /* FriendInfoController.swift */; };
 		B3D802822434ED0F00C17F03 /* FriendInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D802812434ED0F00C17F03 /* FriendInfoCell.swift */; };
 		B3D802882435EE1300C17F03 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D802872435EE1300C17F03 /* User.swift */; };
 		B3D8028A2435EE2B00C17F03 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D802892435EE2B00C17F03 /* Group.swift */; };
+		B3FD50F82448DE2800AF015E /* FriendInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FD50F72448DE2800AF015E /* FriendInfoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		B33B200E2423CBCD00F72A67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B33B20112423CBCD00F72A67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B33B20132423CBCD00F72A67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B36E9DD6244CA4F0000E68AA /* FriendOnePhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendOnePhotoController.swift; sourceTree = "<group>"; };
+		B36E9DDB245498BD000E68AA /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhotoView.swift; path = clientVK/PhotoView.swift; sourceTree = SOURCE_ROOT; };
 		B3B6E2AC243E3B8F00616DA2 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		B3B6E2B0243F613A00616DA2 /* AvatarShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarShadow.swift; sourceTree = "<group>"; };
 		B3D802712434C75600C17F03 /* FriendsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsCell.swift; sourceTree = "<group>"; };
@@ -44,10 +48,10 @@
 		B3D802772434EA0E00C17F03 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		B3D802792434EA3400C17F03 /* MyGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupCell.swift; sourceTree = "<group>"; };
 		B3D8027D2434EBAD00C17F03 /* MyGroupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupController.swift; sourceTree = "<group>"; };
-		B3D8027F2434ECF900C17F03 /* FriendInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendInfoController.swift; sourceTree = "<group>"; };
 		B3D802812434ED0F00C17F03 /* FriendInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendInfoCell.swift; sourceTree = "<group>"; };
 		B3D802872435EE1300C17F03 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B3D802892435EE2B00C17F03 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		B3FD50F72448DE2800AF015E /* FriendInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendInfoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,21 +85,31 @@
 			isa = PBXGroup;
 			children = (
 				B3D8025E2433BA4B00C17F03 /* Model */,
+				B3D802832434EE6900C17F03 /* Group */,
 				B3D802842434EEA000C17F03 /* MyGroup */,
 				B33B20072423CBCC00F72A67 /* SceneDelegate.swift */,
 				B33B20092423CBCC00F72A67 /* ViewController.swift */,
-				B3D802832434EE6900C17F03 /* Group */,
 				B33B200B2423CBCC00F72A67 /* Main.storyboard */,
 				B3B6E2AC243E3B8F00616DA2 /* AvatarView.swift */,
 				B3B6E2B0243F613A00616DA2 /* AvatarShadow.swift */,
-				B3D802852434EEC400C17F03 /* FrendInfo */,
 				B33B200E2423CBCD00F72A67 /* Assets.xcassets */,
+				B36E9DDB245498BD000E68AA /* PhotoView.swift */,
 				B33B20102423CBCD00F72A67 /* LaunchScreen.storyboard */,
+				B3D802852434EEC400C17F03 /* FrendInfo */,
+				B36E9DDA244D8F9D000E68AA /* OnePhotoFriend */,
 				B3D802862434EEE500C17F03 /* Friends */,
 				B33B20132423CBCD00F72A67 /* Info.plist */,
 				B33B20052423CBCC00F72A67 /* AppDelegate.swift */,
 			);
 			path = clientVK;
+			sourceTree = "<group>";
+		};
+		B36E9DDA244D8F9D000E68AA /* OnePhotoFriend */ = {
+			isa = PBXGroup;
+			children = (
+				B36E9DD6244CA4F0000E68AA /* FriendOnePhotoController.swift */,
+			);
+			path = OnePhotoFriend;
 			sourceTree = "<group>";
 		};
 		B3D8025E2433BA4B00C17F03 /* Model */ = {
@@ -128,8 +142,8 @@
 		B3D802852434EEC400C17F03 /* FrendInfo */ = {
 			isa = PBXGroup;
 			children = (
-				B3D8027F2434ECF900C17F03 /* FriendInfoController.swift */,
 				B3D802812434ED0F00C17F03 /* FriendInfoCell.swift */,
+				B3FD50F72448DE2800AF015E /* FriendInfoController.swift */,
 			);
 			path = FrendInfo;
 			sourceTree = "<group>";
@@ -215,18 +229,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3D802782434EA0E00C17F03 /* GroupCell.swift in Sources */,
-				B3D802802434ECF900C17F03 /* FriendInfoController.swift in Sources */,
 				B33B200A2423CBCC00F72A67 /* ViewController.swift in Sources */,
 				B3D802742434C78100C17F03 /* FriendsController.swift in Sources */,
+				B36E9DDC245498BD000E68AA /* PhotoView.swift in Sources */,
 				B33B20062423CBCC00F72A67 /* AppDelegate.swift in Sources */,
 				B33B20082423CBCC00F72A67 /* SceneDelegate.swift in Sources */,
 				B3D8028A2435EE2B00C17F03 /* Group.swift in Sources */,
+				B36E9DD7244CA4F0000E68AA /* FriendOnePhotoController.swift in Sources */,
 				B3D802822434ED0F00C17F03 /* FriendInfoCell.swift in Sources */,
 				B3D802722434C75600C17F03 /* FriendsCell.swift in Sources */,
 				B3B6E2AD243E3B8F00616DA2 /* AvatarView.swift in Sources */,
 				B3D802882435EE1300C17F03 /* User.swift in Sources */,
 				B3B6E2B1243F613A00616DA2 /* AvatarShadow.swift in Sources */,
 				B3D8027E2434EBAD00C17F03 /* MyGroupController.swift in Sources */,
+				B3FD50F82448DE2800AF015E /* FriendInfoController.swift in Sources */,
 				B3D802762434E9DE00C17F03 /* GroupController.swift in Sources */,
 				B3D8027A2434EA3400C17F03 /* MyGroupCell.swift in Sources */,
 			);
@@ -371,7 +387,7 @@
 		B33B20172423CBCD00F72A67 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L84526FKU5;
 				INFOPLIST_FILE = clientVK/Info.plist;
@@ -390,7 +406,7 @@
 		B33B20182423CBCD00F72A67 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L84526FKU5;
 				INFOPLIST_FILE = clientVK/Info.plist;

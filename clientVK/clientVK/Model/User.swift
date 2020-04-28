@@ -26,12 +26,13 @@ case initial = "начальное"
 
 
 struct User {
-    var name: String
-    var avatar: UIImage?
-    var place: String
-    var education: educationEnum
-    var maritalStatus: maritalStatusEnum
-    var foto: [UIImage?]
+    let firstName: String
+    let secondName: String
+    let avatar: UIImage?
+    let place: String?
+    let education: educationEnum?
+    let maritalStatus: maritalStatusEnum?
+    let foto: [UIImage?]
     
     func message() {
   
